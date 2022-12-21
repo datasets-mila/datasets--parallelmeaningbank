@@ -10,6 +10,7 @@ function activate_gitannex {
 		if [[ -z "$(which conda)" ]] && [[ ! -z "${_modules}" ]]
 		then
 			module load ${_modules}
+			eval "$(conda shell.bash hook)"
 		fi
 		conda activate ${_conda_env}
 	fi
