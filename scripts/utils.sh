@@ -140,7 +140,7 @@ function init_venv {
 	if [[ ! -d "${_prefixroot}/venv/${_name}/" ]]
 	then
 		mkdir -p "${_prefixroot}/venv/${_name}/" && \
-		python3 -m venv --no-download "${_prefixroot}/venv/${_name}/" || \
+		python3 -m venv "${_prefixroot}/venv/${_name}/" || \
 		exit_on_error_code "Failed to create ${_name} venv"
 	fi
 
